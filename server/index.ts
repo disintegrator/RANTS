@@ -28,6 +28,12 @@ app.get("/posts/:id", (req, res) => {
   const { params, query } = req;
   nextApp.render(req, res, "/posts", Object.assign({}, params, query));
 });
+
+app.get("/service-worker.js", (req, res) => {
+  const filePath = path.join(__dirname, "..", ".next", "service-worker.js");
+  nextApp.serveStatic(req, res, filePath);
+});
+
 app.get("*", (req, res) => nextHandler(req, res));
 
 export const start = async (port: string | number) => {

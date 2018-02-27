@@ -17,5 +17,6 @@ A web app development stack including:
 * Full Typescript coverage across the codebase
 * GraphQL development using Apollo including proper typing using apollo-codegen
 * Styling thanks to styled-components
-* SSR support thanks to next.js
+* Offline support using Workbox through the [next-offline](https://github.com/hanford/next-offline) plugin
 * Webpack bundle analyzer integrated using [@zeit/next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
+* SSR support thanks to next.js
