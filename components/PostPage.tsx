@@ -5,6 +5,10 @@ import Error from "next/error";
 import fetchPost from "../graphql/client/fetchPost.graphql";
 import { fetchPostQueryVariables, fetchPostQuery } from "../graphql/client";
 
+import Container from "./Container";
+import H1 from "./H1";
+import P from "./P";
+
 export interface Props {
   data?: DataValue<fetchPostQuery>;
 }
@@ -18,10 +22,10 @@ const PostPage = (props: Props) => {
   }
 
   return (
-    <React.Fragment>
-      <h1>{post.title}</h1>
-      <div>{post.body}</div>
-    </React.Fragment>
+    <Container>
+      <H1>{post.title}</H1>
+      <P>{post.body}</P>
+    </Container>
   );
 };
 
