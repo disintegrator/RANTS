@@ -1,0 +1,7 @@
+query fetchPost($id: String!) {
+  post(id: $id) {
+    id
+    title
+    body
+  }
+}
