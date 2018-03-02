@@ -22,7 +22,11 @@ const PostsPage = (props: Props) => {
       <ul>
         {posts.map(p => (
           <li key={p.id}>
-            <Link href={`/posts/${p.id}`}>
+            <Link
+              href={{ pathname: "/post", query: { id: p.id } }}
+              as={`/posts/${p.id}`}
+              prefetch
+            >
               <a>{p.title}</a>
             </Link>
           </li>
