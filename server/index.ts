@@ -33,7 +33,7 @@ app.use("/graphiql", graphiqlExpress({ endpointURL: "/graphql" }));
 // like this route that renders a single post
 app.get("/posts/:id", (req, res) => {
   const { params, query } = req;
-  nextApp.render(req, res, "/posts", Object.assign({}, params, query));
+  nextApp.render(req, res, "/post", Object.assign({}, params, query));
 });
 
 // The next-offline plugin requires registering a route for serving the
