@@ -45,6 +45,12 @@
     "@types/express" "*"
     "@types/node" "*"
 
+"@types/compression@^0.0.35":
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/@types/compression/-/compression-0.0.35.tgz#7673a9c4b075e5194ada8c5938291015652a21e1"
+  dependencies:
+    "@types/express" "*"
+
 "@types/events@*":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
@@ -122,9 +128,9 @@
   dependencies:
     webpack-bundle-analyzer "^2.10.0"
 
-"@zeit/next-css@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@zeit/next-css/-/next-css-0.1.2.tgz#056eeaf9cdf48d6b1e267cf2b862928fc1cbf9eb"
+"@zeit/next-css@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@zeit/next-css/-/next-css-0.1.3.tgz#aacad8e47720315b63b3231601ce4a0b78271cc6"
   dependencies:
     css-loader "^0.28.9"
     extract-text-webpack-plugin "^3.0.2"
@@ -292,9 +298,9 @@ apollo-client@^2.2.5:
   optionalDependencies:
     "@types/async" "2.0.47"
 
-apollo-codegen@^0.18.8:
-  version "0.18.8"
-  resolved "https://registry.yarnpkg.com/apollo-codegen/-/apollo-codegen-0.18.8.tgz#26eee31a721a424d5c8aca6a5e4e3a14d50597ac"
+apollo-codegen@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/apollo-codegen/-/apollo-codegen-0.19.0.tgz#00d2272628a7c296b5aa57d9a02f10ca6d3e676a"
   dependencies:
     "@babel/generator" "7.0.0-beta.38"
     "@babel/types" "7.0.0-beta.38"
@@ -302,7 +308,7 @@ apollo-codegen@^0.18.8:
     common-tags "^1.5.1"
     core-js "^2.5.3"
     glob "^7.1.2"
-    graphql "^0.12.3"
+    graphql "^0.13.1"
     graphql-config "^1.1.1"
     inflected "^2.0.3"
     node-fetch "^1.7.3"
@@ -691,9 +697,9 @@ babel-plugin-react-require@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-react-require/-/babel-plugin-react-require-3.0.0.tgz#2e4e7b4496b93a654a1c80042276de4e4eeb20e3"
 
-babel-plugin-styled-components@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.5.0.tgz#4549f28a19fb05170aa9ee429b4de0eac2d2401d"
+babel-plugin-styled-components@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.5.1.tgz#31dbeb696d1354d1585e60d66c7905f5e474afcd"
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.0.0-beta.37"
     babel-types "^6.26.0"
@@ -1633,6 +1639,24 @@ commondir@^1.0.1:
 component-emitter@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
+
+compressible@~2.0.13:
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/compressible/-/compressible-2.0.13.tgz#0d1020ab924b2fdb4d6279875c7d6daba6baa7a9"
+  dependencies:
+    mime-db ">= 1.33.0 < 2"
+
+compression@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/compression/-/compression-1.7.2.tgz#aaffbcd6aaf854b44ebb280353d5ad1651f59a69"
+  dependencies:
+    accepts "~1.3.4"
+    bytes "3.0.0"
+    compressible "~2.0.13"
+    debug "2.6.9"
+    on-headers "~1.0.1"
+    safe-buffer "5.1.1"
+    vary "~1.1.2"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -3725,7 +3749,7 @@ miller-rabin@^4.0.0:
     bn.js "^4.0.0"
     brorand "^1.0.1"
 
-mime-db@~1.33.0:
+"mime-db@>= 1.33.0 < 2", mime-db@~1.33.0:
   version "1.33.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.33.0.tgz#a3492050a5cb9b63450541e39d9788d2272783db"
 
@@ -4128,6 +4152,10 @@ on-finished@~2.3.0:
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
   dependencies:
     ee-first "1.1.1"
+
+on-headers@~1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.1.tgz#928f5d0f470d49342651ea6794b0857c100693f7"
 
 once@^1.3.0, once@^1.3.1, once@^1.3.3, once@^1.4.0:
   version "1.4.0"
@@ -4635,9 +4663,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.11.0.tgz#c024f70cab158c993f50fc0c25ffe738cb8b0f85"
+prettier@^1.11.1:
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.11.1.tgz#61e43fc4cd44e68f2b0dfc2c38cd4bb0fccdcc75"
 
 pretty-bytes@^4.0.2:
   version "4.0.2"
@@ -5699,9 +5727,9 @@ ts-loader@^3.3.1:
     micromatch "^3.1.4"
     semver "^5.0.1"
 
-ts-node@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-5.0.0.tgz#9aa573889ad7949411f972981c209e064705e36f"
+ts-node@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-5.0.1.tgz#78e5d1cb3f704de1b641e43b76be2d4094f06f81"
   dependencies:
     arrify "^1.0.0"
     chalk "^2.3.0"

@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
 import next from "next";
+import compression from "compression";
 
 import * as resolvers from "./resolvers";
 
@@ -20,6 +21,8 @@ const schema = makeExecutableSchema({
   typeDefs,
   resolvers
 });
+
+app.use(compression());
 
 // GraphQL requires a single route
 app.use("/graphql", bodyParser.json(), graphqlExpress({ schema }));
