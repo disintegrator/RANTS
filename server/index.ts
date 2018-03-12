@@ -22,8 +22,9 @@ const schema = makeExecutableSchema({
   resolvers
 });
 
-app.use(compression());
-
+if (!dev) {
+  app.use(compression());
+}
 // GraphQL requires a single route
 app.use("/graphql", bodyParser.json(), graphqlExpress({ schema }));
 
